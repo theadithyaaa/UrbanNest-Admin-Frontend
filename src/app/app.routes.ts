@@ -3,6 +3,7 @@ import { HeropageComponent } from './pages/heropage/heropage.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { AddComponent } from './pages/add/add.component';
+import { FindComponent } from './pages/find/find.component';
 
 export const routes: Routes = [
     {
@@ -23,6 +24,6 @@ export const routes: Routes = [
     },
     {
         path: "find",
-        component: AddComponent
+        component: FindComponent
     }
 ];
