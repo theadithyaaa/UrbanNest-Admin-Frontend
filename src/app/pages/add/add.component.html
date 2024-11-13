@@ -1,1 +1,37 @@
-<p>add works!</p>
+<div class="banner">
+    <app-navbar></app-navbar>
+
+
+    <div class="modal-content">
+     
+      
+        <form #propertyForm="ngForm" (ngSubmit)="addProperty()">
+          <div class="form">
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.owner" name="owner" placeholder="Enter property owner" required>
+            </div>
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.ownercontact" name="ownercontact" placeholder="Enter Owner contact" required>
+            </div>
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.location" name="location" placeholder="Enter property location" required>
+            </div>
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.district" name="district" placeholder="Enter property district" required>
+            </div>
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.price" name="price" placeholder="Enter property price" required>
+            </div>
+            <div >
+              <input type="text" class="form-control" [(ngModel)]="property.type" name="type" placeholder="Enter property type" required>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="clearFields()">Add Property</button>
+            
+          </div>
+        </form>
+      </div>
+    
+    
+</div>
+  
+  

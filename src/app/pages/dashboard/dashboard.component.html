@@ -34,26 +34,4 @@
 </div>
 
 
-<!-- add property modal -->
-<div class="modal fade" id="addProperty" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Add Property</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style=" justify-content: center; display: flex">
-          <div class="form">
-               <input type="text" class="txt" [(ngModel)]="property.owner" placeholder="Enter property owner">
-               <input type="text" class="txt" [(ngModel)]="property.ownercontact" placeholder="Enter Owner contact">
-               <input type="text" class="txt" [(ngModel)]="property.location" placeholder="Enter property location">
-               <input type="text" class="txt" [(ngModel)]="property.district" placeholder="Enter property district">
-               <input type="text" class="txt" [(ngModel)]="property.price" placeholder="Enter property price">
-               <input type="text" class="txt" [(ngModel)]="property.type" placeholder="Enter property type">
-               <button type="submit" class="submit" (click)="addProperty()" (click)="clearFields()">Add Property</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+
