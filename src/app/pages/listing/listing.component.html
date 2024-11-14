@@ -1,0 +1,31 @@
+<div class="banner">
+<app-navbar></app-navbar>
+
+<div class="property-table-container">
+    <table class="property-table">
+      <thead>
+        <tr>
+          <th>Property ID</th>
+          <th>Owner</th>
+          <th>Owner Contact</th>
+          <th>Location</th>
+          <th>District</th>
+          <th>Price</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let property of propertyInfo">
+          <td>{{ property.id }}</td>
+          <td>{{ property.owner }}</td>
+          <td>{{ property.ownerContact }}</td>
+          <td>{{ property.location }}</td>
+          <td>{{ property.district }}</td>
+          <td>{{ property.price}}</td>
+          <td>{{ property.type }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

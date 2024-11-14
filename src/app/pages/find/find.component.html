@@ -6,33 +6,20 @@
     </div>
 
     <div class="details">
-        <p>Property id: <span class="txt"> {{propertyInfo.id}}</span></p>
-        <p>Owner: <span class="txt"> {{propertyInfo.owner}}</span></p>
-        <p>Owner contact: <span class="txt"> {{propertyInfo.ownerContact}} </span></p>
-        <p>Location: <span class="txt"> {{propertyInfo.location}}</span></p>
-        <p>District: <span class="txt"> {{propertyInfo.district}}</span></p>
-        <p>Price: <span class="txt"> {{propertyInfo.price}} </span></p>
-        <p>Type: <span class="txt"> {{propertyInfo.type}} </span></p>
-
-    </div>
-
-    <!-- <table class="table">
-        <tr>
-            <th>Property id</th>
-            <th>Owner</th>
-            <th>Owner contact</th>
-            <th>Location</th>
-            <th>District</th>
-            <th>Price</th>
-            <th>Type</th>
-        </tr>
-        <tr>
-            <td>{{propertyInfo.id}}</td>
-            <td>{{propertyInfo.owner}}</td>
-            <td>{{propertyInfo.ownerContact}}</td>
-            <td>{{propertyInfo.location}}</td>
-            <td>{{propertyInfo.district}}</td>
-            <td>{{propertyInfo.price}}</td>
-            <td>{{propertyInfo.type}}</td>
-    </table> -->
+              
+        <div *ngIf="propertyInfo.id">
+          <p>Property ID: <span class="txt">{{ propertyInfo.id }}</span></p>
+          <p>Owner: <input class="txt" [(ngModel)]="updatedPropertyInfo.owner" /></p>
+          <p>Owner Contact: <input class="txt" [(ngModel)]="updatedPropertyInfo.ownerContact" /></p>
+          <p>Location: <input class="txt" [(ngModel)]="updatedPropertyInfo.location" /></p>
+          <p>District: <input class="txt" [(ngModel)]="updatedPropertyInfo.district" /></p>
+          <p>Price: <input class="txt" [(ngModel)]="updatedPropertyInfo.price" /></p>
+          <p>Type: <input class="txt" [(ngModel)]="updatedPropertyInfo.type" /></p>
+        <div class="buttons">
+          <button (click)="updateProperty()" class="update">Update</button>
+          <button (click)="deleteProperty()" class="delete">Delete</button>
+        </div>
+        </div>
+      </div>
+      
 </div>

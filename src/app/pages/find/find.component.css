@@ -1,7 +1,7 @@
 .banner{
     background-color: #3C5B6F;
     width: 100%;
-    height: 150vh
+    height: 200vh
 }
 
 .searchbar {
@@ -42,7 +42,7 @@
 .details {
     text-align: left;
     margin: 4%; 
-    margin-left: 10%; 
+    margin-left: 25%; 
     padding: 1.5%; 
     border-radius: 8px;
     background-color: #ffffff8f; 
@@ -52,6 +52,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd; 
     line-height: 1.6; 
+    width: 50%;
 }
 
 .txt {
@@ -59,5 +60,53 @@
     font-size: 16px;
     color: #000000; 
     font-weight: 400;
+    text-align: left;
+    padding: 1%;
+    border-radius: 8px;
+    background-color: #ffffff8f; 
+    color: #333; 
+    font-size: 18px; 
+    font-weight: 500; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd; 
+    line-height: 1.6;
+    width: 100%;
+}
+
+.update {
+    margin: 2%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    
+    
+}
+
+.update:hover {
+    background-color: #0b3;
+}
+
+.delete {
+    margin: 2%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete:hover {
+    background-color: #b30b0b;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
 }
 
