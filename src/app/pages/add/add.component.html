@@ -5,7 +5,7 @@
     <div class="modal-content">
      
       
-        <form #propertyForm="ngForm" (ngSubmit)="addProperty()">
+        <form #propertyForm="ngForm" >
           <div class="form">
             <div >
               <input type="text" class="form-control" [(ngModel)]="property.owner" name="owner" placeholder="Enter property owner" required>
@@ -25,7 +25,7 @@
             <div >
               <input type="text" class="form-control" [(ngModel)]="property.type" name="type" placeholder="Enter property type" required>
             </div>
-            <button type="submit" class="btn btn-primary" (click)="clearFields()">Add Property</button>
+            <button type="submit" class="btn btn-primary" (click)="addProperty()" (click)="clearFields()">Add Property</button>
             
           </div>
         </form>

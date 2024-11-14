@@ -1,7 +1,38 @@
 <div class="banner">
     <app-navbar></app-navbar>
     <div class="searchbar">
-        <input type="text" class="search" placeholder="Enter Property id" >
-        <button class="searchbtn" >Search</button>
+        <input type="text" class="search" placeholder="Enter Property id" [(ngModel)]="id" >
+        <button class="searchbtn" (click)="getPropertyInfo()" >Search</button>
     </div>
+
+    <div class="details">
+        <p>Property id: <span class="txt"> {{propertyInfo.id}}</span></p>
+        <p>Owner: <span class="txt"> {{propertyInfo.owner}}</span></p>
+        <p>Owner contact: <span class="txt"> {{propertyInfo.ownerContact}} </span></p>
+        <p>Location: <span class="txt"> {{propertyInfo.location}}</span></p>
+        <p>District: <span class="txt"> {{propertyInfo.district}}</span></p>
+        <p>Price: <span class="txt"> {{propertyInfo.price}} </span></p>
+        <p>Type: <span class="txt"> {{propertyInfo.type}} </span></p>
+
+    </div>
+
+    <!-- <table class="table">
+        <tr>
+            <th>Property id</th>
+            <th>Owner</th>
+            <th>Owner contact</th>
+            <th>Location</th>
+            <th>District</th>
+            <th>Price</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>{{propertyInfo.id}}</td>
+            <td>{{propertyInfo.owner}}</td>
+            <td>{{propertyInfo.ownerContact}}</td>
+            <td>{{propertyInfo.location}}</td>
+            <td>{{propertyInfo.district}}</td>
+            <td>{{propertyInfo.price}}</td>
+            <td>{{propertyInfo.type}}</td>
+    </table> -->
 </div>
