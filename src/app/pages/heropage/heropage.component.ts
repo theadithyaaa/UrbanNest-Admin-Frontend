@@ -11,11 +11,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './heropage.component.css'
 })
 export class HeropageComponent {
-  email: string = "";
+  username: string = "";
   password: string = "";
 
   login() {
-    if (this.email === 'admin@gmail.com' && this.password === 'admin123') {
+    if (this.username === 'UrbanAdmin' && this.password === 'admin123') {
       alert('Login successful');
       window.location.href = '/dashboard';
     } else {

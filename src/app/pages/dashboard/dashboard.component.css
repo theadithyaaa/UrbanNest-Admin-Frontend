@@ -68,3 +68,77 @@
     cursor: pointer;
     left: 47%;
 }
+
+@media (max-width: 600px) {
+    .banner {
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px; 
+    }
+
+    .cards {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .card {
+        margin-bottom: 15px; 
+        width: 100%; 
+    }
+
+    .form {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .txt {
+        font-size: 16px;
+    }
+
+    .submit {
+        width: 100%; 
+        margin-top: 20px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .banner {
+        height: auto;
+    }
+
+    .logo {
+        font-size: 40px; 
+    }
+
+    .cards {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin: 5%;
+    }
+
+    .card {
+        margin: 10px; 
+        width: 45%; 
+    }
+
+    .form {
+        max-width: 80%;
+        padding: 1rem;
+    }
+
+    .txt {
+        font-size: 18px; 
+    }
+
+    .submit {
+        width: auto;
+        margin: 10px;
+    }
+}
+
