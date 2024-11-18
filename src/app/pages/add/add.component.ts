@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [NavbarComponent, RouterLink, FormsModule, CommonModule],
   templateUrl: './add.component.html',
-  styleUrl: './add.component.css'
+  styleUrls: ['./add.component.css']  
 })
 export class AddComponent {
   public property: any = {
@@ -19,27 +19,44 @@ export class AddComponent {
     district: "",
     price: "",
     type: ""
-  }
+  };
+
+  public districts: string[] = [
+    'Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Matale', 'Nuwara Eliya',
+    'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
+    'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee',
+    'Kurunegala', 'Puttalam', 'Anuradhapura', 'Polonnaruwa', 'Badulla',
+    'Monaragala', 'Ratnapura', 'Kegalle'
+  ];
+
   async addProperty() {
-    let response = await fetch("http://localhost:8080/property/add-property", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(
-        this.property = {
+    try {
+      let response = await fetch("http://localhost:8080/property/add-property", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           "owner": this.property.owner,
           "ownerContact": this.property.ownercontact,
           "location": this.property.location,
           "district": this.property.district,
           "price": this.property.price,
           "type": this.property.type
-        }
-      )
-    })
-    alert('Property added successfully');
-    let body = await response.json()
-    alert(JSON.stringify(body));
-    return body;
-    
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add property');
+      }
+
+      alert('Property added successfully');
+      let body = await response.json();
+      alert(JSON.stringify(body));
+      return body;
+      
+    } catch (error) {
+      console.error('Error:', error);
+      // alert('An error occurred while adding the property.');
+    }
   }
 
   clearFields() {
@@ -52,5 +69,4 @@ export class AddComponent {
       type: ""
     };
   }
-
 }

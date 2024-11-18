@@ -1,37 +1,95 @@
 <div class="banner">
-    <app-navbar></app-navbar>
+  <app-navbar></app-navbar>
+  <form #propertyForm="ngForm">
+  <div class="form">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="property.owner"
+        name="owner"
+        placeholder="Enter property owner"
+        required
+      />
+    </div>
 
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="property.ownercontact"
+        name="ownercontact"
+        placeholder="Enter Owner contact"
+        required
+      />
+    </div>
 
-    <div class="modal-content">
-     
-      
-        <form #propertyForm="ngForm" >
-          <div class="form">
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.owner" name="owner" placeholder="Enter property owner" required>
-            </div>
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.ownercontact" name="ownercontact" placeholder="Enter Owner contact" required>
-            </div>
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.location" name="location" placeholder="Enter property location" required>
-            </div>
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.district" name="district" placeholder="Enter property district" required>
-            </div>
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.price" name="price" placeholder="Enter property price" required>
-            </div>
-            <div >
-              <input type="text" class="form-control" [(ngModel)]="property.type" name="type" placeholder="Enter property type" required>
-            </div>
-            <button type="submit" class="btn btn-primary" (click)="addProperty()" (click)="clearFields()">Add Property</button>
-            
-          </div>
-        </form>
-      </div>
-    
-    
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="property.location"
+        name="location"
+        placeholder="Enter property location"
+        required
+      />
+    </div>
+
+    <div>
+      <select
+        class="form-control"
+        [(ngModel)]="property.district"
+        name="district"
+        required
+      >
+        <option value="" disabled selected>Select district</option>
+        <option *ngFor="let district of districts" [value]="district">
+          {{ district }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="property.price"
+        name="price"
+        placeholder="Enter property price"
+        required
+      />
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="radio"
+          [(ngModel)]="property.type"
+          name="type"
+          value="House"
+          required
+        />
+        House
+      </label>
+      <label>
+        <input
+          type="radio"
+          [(ngModel)]="property.type"
+          name="type"
+          value="Apartment"
+          required
+        />
+        Apartment
+      </label>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="addProperty(); clearFields()"
+    >
+      Add Property
+    </button>
+  </div>
+</form>
 </div>
-  
-  
